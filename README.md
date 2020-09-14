@@ -1,2 +1,2 @@
 # api_nodeSend
- service in node to send files from amazon
+ service in Node to send files into AWS
