@@ -18,11 +18,14 @@ app.use(express.json());
 //Create port with server
 const port = process.env.port || 4900;
 
+// Enable folder public
+app.use( express.static('uploads') );
+
 // Route's 
 app.use('/api/nodeSend', routes());
 
 //run server
-app.listen(port, '0.0.0.0',() => {
+app.listen(port, () => {
     console.log(`el servidor esta funcionando en el puerto ${port}`);
 });
 
