@@ -10,6 +10,7 @@ module.exports = (req, res, next ) => {
         try {
             const user = jwt.verify(token, process.env.SECRET_WORD );
             req.user = user;
+            next();
         } catch (error) {
             console.log(error);
             console.log('JWT no valido');
